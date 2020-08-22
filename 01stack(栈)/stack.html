@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //方法：
+        // push: 添加
+        // pop： 删除
+        // peek ： 栈顶元素
+        // isEmpty： 判断是否空
+        // size： 大小
+        // toString：将栈结构以字符串返回
+        // 封装
+        function Stack() {
+            //栈属性
+            this.items = []
+            // 栈操作
+            // 1.添加
+            Stack.prototype.push = function (elment) {
+                this.items[this.items.length] = elment;
+            }
+            // 2.删除
+            Stack.prototype.pop = function () {
+                this.items.pop();
+            }
+            // 3.栈顶元素
+            Stack.prototype.topElment = function () {
+                return this.items[this.items.length - 1];
+            }
+            // 4.判断是否空
+            Stack.prototype.isEmpty = function () {
+                return this.items.length === 0;
+            }
+            // 5.大小
+            Stack.prototype.length = function () {
+                return this.items.length;
+            }
+            // 6.将栈结构以字符串返回
+            Stack.prototype.toString = function () {
+                return this.items.join("")
+
+            }
+        }
+        // 使用
+        var s = new Stack();
+        s.push(26)
+        s.push(37)
+        s.push(28)
+        s.push(28)
+        s.push(25)
+        console.log(s.items);
+        s.pop();
+        console.log(s.items);
+        s.topElment();
+        console.log(s.topElment());
+        console.log(s.isEmpty());
+        console.log(s.length());
+        console.log(s.toString());
+    </script>
+</body>
+
+</html>
