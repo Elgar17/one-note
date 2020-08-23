@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Queue() {
+            // 创建
+            this.items = {};
+            this.count = 0;         // 队列大小
+            this.lowestCount = 0;   // 第一个元素的位置
+            // 方法
+            // 1. 添加(enQueue)
+            Queue.prototype.enQueue = function(elment) {
+                //注意一下， this.items[this.count]相当于this.items.0 现在的items = {0: elment}
+                this.items[this.count] = elment;
+                this.count++;  
+            }
+            // 2. 移除(deQueue)
+            Queue.prototype.deQueue = function() {
+                if((this.count - this.lowestCount) === 0){
+                    return undefined;
+                }
+                var result = this.items[this.lowestCount];
+                delete this.items[this.lowestCount];
+                this.lowestCount++;
+                return result;
+            }
+        }
+
+        
+
+        var myQueue = new Queue();
+        myQueue.enQueue('hello');
+        myQueue.enQueue('world');
+        console.log(myQueue)
+        myQueue.deQueue()
+        console.log(myQueue)
+    </script>
+</body>
+
+</html>

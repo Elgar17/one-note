@@ -19,7 +19,7 @@
         // 封装
         function Stack() {
             //栈属性
-            this.items = []
+            this.items = [];
             // 栈操作
             // 1.添加
             Stack.prototype.push = function (elment) {
@@ -48,20 +48,20 @@
             }
         }
         // 使用
-        var s = new Stack();
-        s.push(26)
-        s.push(37)
-        s.push(28)
-        s.push(28)
-        s.push(25)
-        console.log(s.items);
-        s.pop();
-        console.log(s.items);
-        s.topElment();
-        console.log(s.topElment());
-        console.log(s.isEmpty());
-        console.log(s.length());
-        console.log(s.toString());
+        var myStack = new Stack();
+        myStack.push(26)
+        myStack.push(37)
+        myStack.push(28)
+        myStack.push(28)
+        myStack.push(25)
+        console.log(myStack.items); // [26, 37, 28, 28, 25]
+        myStack.pop();
+        console.log(myStack.items); // [26, 37, 28, 28]
+        myStack.topElment();
+        console.log(myStack.topElment()); // 28
+        console.log(myStack.isEmpty()); // false
+        console.log(myStack.length()); // 4
+        console.log(myStack.toString()); // 26372828
     </script>
 </body>
 
