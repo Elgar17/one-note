@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Stack() {
+            this.items = [];
+            Stack.prototype.push = function (elment) {
+                this.items[this.items.length] = elment;
+            }
+            Stack.prototype.pop = function () {
+                return this.items.pop();
+            }
+            Stack.prototype.topElment = function () {
+                return this.items[this.items.length - 1];
+            }
+            Stack.prototype.isEmpty = function () {
+                return this.items.length === 0;
+            }
+            Stack.prototype.length = function () {
+                return this.items.length;
+            }
+            Stack.prototype.toString = function () {
+                return this.items.join("")
+
+            }
+        }
+        //var remStack = new Stack();
+        //remStack.push(55);
+        //console.log(remStack)
+        //var h = remStack.pop();
+        //console.log(h )
+        function decimalToBinary(decNum) {
+            var remStack = new Stack();
+            var num = decNum;
+            var rem = 0;       // 存放余数
+            var bStr = '';
+            while(num > 0){
+                rem = Math.floor(num%2);
+                remStack.push(rem);
+                num = Math.floor(num/2);
+            }
+            while(!remStack.isEmpty()){
+                bStr =  bStr + remStack.pop();
+            }
+            return bStr;
+            
+        }
+        console.log(decimalToBinary(10))
+    </script>
+</body>
+
+</html>
