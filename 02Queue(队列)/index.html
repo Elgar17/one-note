@@ -12,18 +12,18 @@
         function Queue() {
             // 创建
             this.items = {};
-            this.count = 0;         // 队列大小
-            this.lowestCount = 0;   // 第一个元素的位置
+            this.count = 0; // 队列大小
+            this.lowestCount = 0; // 第一个元素的位置
             // 方法
             // 1. 添加(enQueue)
-            Queue.prototype.enQueue = function(elment) {
+            Queue.prototype.enQueue = function (elment) {
                 //注意一下， this.items[this.count]相当于this.items.0 现在的items = {0: elment}
                 this.items[this.count] = elment;
-                this.count++;  
+                this.count++;
             }
             // 2. 移除(deQueue)
-            Queue.prototype.deQueue = function() {
-                if((this.count - this.lowestCount) === 0){
+            Queue.prototype.deQueue = function () {
+                if ((this.count - this.lowestCount) === 0) {
                     return undefined;
                 }
                 var result = this.items[this.lowestCount];
@@ -40,7 +40,7 @@
 
         }
 
-        
+
 
         var myQueue = new Queue();
         myQueue.enQueue('hello');
@@ -48,6 +48,29 @@
         console.log(myQueue)
         myQueue.deQueue()
         console.log(myQueue)
+
+
+        /**
+         *
+         * @param nameList 人员列表
+         * @param num 击鼓次数
+         */
+        var list = ["elgar", "jeck", "Tom", "goog"];
+
+        function sendFlower(nameList, num) {
+            var arr = nameList;
+            var eliminated = "";
+            while (arr.length > 1) {
+                for (var i = 0; i < num; i++) {
+                    arr.push(arr.shift())
+                }
+                eliminated = arr.shift();
+                console.log(eliminated + '被淘汰');
+            }
+            console.log(arr[0]);
+            return arr[0];
+        }
+        sendFlower(list, 86)
     </script>
 </body>
 

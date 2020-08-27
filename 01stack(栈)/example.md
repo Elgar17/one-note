@@ -35,3 +35,4 @@ function decimalToBinary(decNum) {
 }
 console.log(decimalToBinary(10))    // 1010
 ```
+
