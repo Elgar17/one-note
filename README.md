@@ -1,41 +1,52 @@
 # JS-Data-Structres
 
-🔎简介：javascript数据结构语算法。
-
-序言：
-发现JavaScript的数据结构与前端算法方面的内容较少，自己参考网上的内容整理了一下JavaScript数据结构,高频 `LeetCode`算法，《剑指offer》上的经典算法，大厂高频前端算法题。
-
-- [🔢数据结构](./01stack(栈)/Stack.md)
-- [🔐算法]()
-
-### 📑目录
-#### 1 栈(Stack)
-##### 1.1 [栈的实现](./01stack(栈)/Stack.md)
-##### 1.2 [应用：十进制转二进制](./01Stack(栈)/example.md)
+🔎简介：这是一份初级前端工程师的笔记，包括数据结构，前端算法，面试题（HTML, CSS, JavaScript）。
 
 
-#### 2 队列(Queue)
-
-##### 2.1 [队列的实现](./02Queue(队列)/queue.md)
-
-##### 2.1 [双端队列的实现](./02Queue(队列)/DBqueue.md)
-##### 2.3 [应用：击鼓传花](./02Queue(队列)/sendFlower.md)
-
-
-#### 3 链表(LinkedList)
-
-##### 3.1 [单项链表](./03LinkedList(链表)/LinkedList.md)
-
-##### 3.2 [双端队列的实现](./02Queue(队列)/DBqueue.md)
-
-#### 4 树结构(Tree )
+- [数据结构](01数据结构/RED.md)
+- [前端算法](./02算法/RED.md)
+- [HTML](./HTML/RED.md)
+- [CSS](./CSS/RED.md)
+- [JavaScript](./JavaScrip/RED.md)
 
 
-### 🔐算法
 
+## 📊数据结构
+1. 栈(Stack)
+2. 队列(Queue)
+3. 链表(LinkedList)
+4. 树结构(Tree )
+
+
+## 🔐算法
 1. [数组去重⭐](./05算法/01.md)
 2. [数组扁平化⭐](./05算法/02.md)
-3. [寻找数组重复的数(剑指offer)](./05算法/03.md)
+3. [寻找数组重复的数（剑指offer）](./05算法/03.md)
+4. [数字科学计数（百度）](./02算法/04.md)
+
+
+
+## 📃HTML 
+1. DOCTYPE
+2. 
+
+## 🎨 CSS
+
+1. 块级标签与行内标签
+2. 盒模型
+3. 水平垂直居中方案
+4. `display`属性有哪些值
+5. 元素的隐藏
+6. `CSS`选择器
+
+
+## 🏃‍♂️ JavaScript
+
+1. JS 数据类型
+2. 判断变量的类型
+3. 数据类型转换
+4. 数组常见方法
+5. 对象常见属性
 
 
 
@@ -43,9 +54,3 @@
 
 
 
-
-
-
-
-### 参考文献：
-[[1] 学习javascript数据结构与算法](https://www.ituring.com.cn/book/2653)
