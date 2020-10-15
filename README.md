@@ -28,7 +28,6 @@
 
 ## 📃HTML 
 1. DOCTYPE
-2. 
 
 ## 🎨 CSS
 
