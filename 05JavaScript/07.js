@@ -4,7 +4,7 @@
 
 
 // 第一种方法要判断数组和对象
- function deepClone1(origin, target) {
+function deepClone1(origin, target) {
     var target = target || {},
         isArr = Object.prototype.toString,
         arrStr = "[object Array]";
@@ -24,14 +24,14 @@
 
 // 不用判断数组对象
 function deepClone(obj) {
-	if (obj === null) return obj;
+    if (obj === null) return obj;
     // if (obj instanceof Date) return new Data(obj);
-	// if (obj instanceof RegExp) return new RegExp(obj);
+    // if (obj instanceof RegExp) return new RegExp(obj);
     if (typeof obj !== "object") return obj;
-	var cloneObj = new obj.constructor();
+    var cloneObj = new obj.constructor();
     for (var i in obj) {
-    	if (obj.hasOwnProperty(i)) {
-           cloneObj[i] = deepClone(obj[i]);	// 递归
+        if (obj.hasOwnProperty(i)) {
+            cloneObj[i] = deepClone(obj[i]); // 递归
         }
     }
     return cloneObj;
@@ -45,7 +45,7 @@ var obj = {
     color: {
         one: "red"
     },
-    say: function(){
+    say: function () {
         console.log(this)
     }
 }
